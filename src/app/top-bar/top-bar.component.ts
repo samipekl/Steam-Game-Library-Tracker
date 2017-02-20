@@ -1,4 +1,6 @@
+import { RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-top-bar',
