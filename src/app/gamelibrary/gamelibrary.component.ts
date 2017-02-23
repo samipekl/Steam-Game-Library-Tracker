@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { IGDBService } from './../services/igdb.service';
 import { SteamworksService } from './../services/steamworks.service';
 import { Component, OnInit } from '@angular/core';
@@ -10,17 +11,21 @@ import { Component, OnInit } from '@angular/core';
 export class GamelibraryComponent implements OnInit {
 
   private games: any = {};
-  private user: any = {};
-  private key: any = '9646ACD0D9D80E4ABCF5059BF3C7BA79';
-  private url: any = '';
 
-  constructor(private steamWorks: SteamworksService, private IGDB: IGDBService) { }
+  constructor(private steamWorks: SteamworksService, private IGDB: IGDBService, private router: Router) { }
 
 
 
   ngOnInit() {
-if (localStorage.getItem('steamId') !== null) {
-  console.log(this.steamWorks.getGames(localStorage.getItem('steamId')))
-}
+if (localStorage.getItem('id') === null) {
+    this.router.navigate(['gsearch']);
+} else {
+    console.log(localStorage.getItem('id'));
+    this.steamWorks.getGames().subscribe(
+      (res) => {
+        console.log(res);
+      }
+    );
   }
+}
 }
