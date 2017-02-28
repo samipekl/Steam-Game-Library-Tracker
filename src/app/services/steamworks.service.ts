@@ -13,8 +13,8 @@ private url: string = `https://api.steampowered.com/IPlayerService/GetOwnedGames
 getGames = () => {
   const headers = new Headers({ 'Content-type': 'application/json' });
   const options = new RequestOptions({headers: headers});
-  this.resp.setHeader()
-    return this.http.get(this.url, options)
+  /*this.resp.setHeader()*/
+    return this.http.get(this.url)
     .map(resp => resp.json());
   }
 }

@@ -11,6 +11,9 @@ import { Component, OnInit } from '@angular/core';
 export class GamelibraryComponent implements OnInit {
 
   private games: any = {};
+  private logged: any = false;
+  private i: any = 0;
+  private gamelog: any = [];
 
   constructor(private steamWorks: SteamworksService, private IGDB: IGDBService, private router: Router) { }
 
@@ -24,8 +27,21 @@ if (localStorage.getItem('id') === null) {
     this.steamWorks.getGames().subscribe(
       (res) => {
         console.log(res);
+        this.games = res.response.games;
+        console.log(this.games);
+
       }
     );
+    this.logged = true;
   }
+if (this.logged === true) {
+  /*for ( this.i = 0; this.i < this.games.length; this.i++) {*/
+    this.IGDB.getGames('Thief').subscribe(
+      (res) => {
+        console.log(res);
+      }
+    );
+
 }
+  }
 }
