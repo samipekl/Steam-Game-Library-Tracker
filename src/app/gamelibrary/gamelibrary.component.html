@@ -1,1 +1,11 @@
-
+<h2>Games</h2>
+<ul>
+  <li *ngFor="let game of games">
+    <p> AppID: {{ game.appid }}</p>
+    <p> Name: {{ game.name }}</p>
+    <p> Playtime: {{ game.playtime_forever }} minutes</p>
+    <p> Keywords: {{ game.genres }}</p>
+    <p></p>
+    <br>
+  </li>
+</ul>

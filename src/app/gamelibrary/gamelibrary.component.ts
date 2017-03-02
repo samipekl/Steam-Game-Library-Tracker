@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamelibraryComponent implements OnInit {
 
-  private games: any = {};
+  private games: any = [];
   private i: any = 0;
   private id: any = {};
   private gamelog: any = [];
@@ -30,8 +30,10 @@ if (localStorage.getItem('id') === null) {
     this.steamWorks.getGames().subscribe(
       (res) => {
         this.games = res.response.games;
-        /*console.log(this.games)*/
-        for ( this.i = 0; this.i < 3; this.i = this.i + 1 ) {
+        console.log(this.games)
+        for ( this.i = 0; this.i <= 10/*this.games.length*/; this.i = this.i + 1 ) {
+        this.games[this.i].genres = [];
+        this.games[this.i].themes = [];
           console.log(this.i);
           console.log(this.games[this.i].name);
           if (this.games[this.i].name !== null) {
@@ -39,10 +41,11 @@ if (localStorage.getItem('id') === null) {
     this.IGDB.getGames(this.games[this.i].name).subscribe(
       (res) => {
         this.log = res;
-        console.log(this.log[0].genres);
-        this.games[this.i].keywords = this.log[0].keywords;
-        this.games[this.i].genres = this.log[0].genres[0];
-        this.games[this.i].themes = this.log[0].themes[0];
+//        console.log(this.log[0].keywords);
+//        this.games[this.i].keywords = this.log[0].keywords;
+//        this.games[this.i].genres.splice(0, 0, this.log[0].genres[0]);*/
+//        this.games[this.i].themes = this.log[0].themes[0];
+          this.games[this.i].GDname = this.log[0].name;
         console.log(this.games[this.i]);
     console.log('Choochoo');
       }
