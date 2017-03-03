@@ -14,8 +14,6 @@ export class GamelibraryComponent implements OnInit {
   private i: any = 0;
   private id: any = {};
   private gamelog: any = [];
-  private gName: string;
-  private log: any = {};
 
   constructor(private steamWorks: SteamworksService, private IGDB: IGDBService, private router: Router) { }
 
@@ -31,32 +29,35 @@ if (localStorage.getItem('id') === null) {
       (res) => {
         this.games = res.response.games;
         console.log(this.games)
-        for ( this.i = 0; this.i <= 10/*this.games.length*/; this.i = this.i + 1 ) {
-        this.games[this.i].genres = [];
-        this.games[this.i].themes = [];
-          console.log(this.i);
-          console.log(this.games[this.i].name);
-          if (this.games[this.i].name !== null) {
-    this.gName = this.games[this.i].name;
-    this.IGDB.getGames(this.games[this.i].name).subscribe(
-      (res) => {
-        this.log = res;
-//        console.log(this.log[0].keywords);
-//        this.games[this.i].keywords = this.log[0].keywords;
-//        this.games[this.i].genres.splice(0, 0, this.log[0].genres[0]);*/
-//        this.games[this.i].themes = this.log[0].themes[0];
-          this.games[this.i].GDname = this.log[0].name;
-        console.log(this.games[this.i]);
-    console.log('Choochoo');
-      }
-    );
+        for ( let game of this.games) {
+          console.log(game);
+          if (game.name !== null) {
+            this.IGDB.getGames(game.name).subscribe(
+              (res) => {
+                game.keywordsIds = res[0].keywords;
+                game.genresIds = res[0].genres;
+                game.themesIds = res[0].themes;
+                game.GDname = res[0].name;
+              }
+            );
           } else {
             console.log("Not Found")
           }
 
 }
-
-        /*console.log(this.games[4]);*/
+        for ( let game of this.games ) {
+          console.log('ChooCH00Xhoo!!!')
+          if ( game.genresIds !== null ) {
+            console.log(game['name']);
+            /*for ( let ID of game.genresIds ) {
+            this.IGDB.getGenres(ID).subscribe(
+              (res) => {
+                game.genres.push(res.name);
+              }
+            )
+            }*/
+          }
+        }
 
       }
     );

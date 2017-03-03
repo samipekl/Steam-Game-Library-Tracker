@@ -4,3 +4,5 @@
 [0301/133612:ERROR:node_debugger.cc(86)] Cannot start debugger server
 [0302/131244:ERROR:tcp_listen_socket.cc(76)] Could not bind socket to 127.0.0.1:6004
 [0302/131244:ERROR:node_debugger.cc(86)] Cannot start debugger server
+[0303/104549:ERROR:tcp_listen_socket.cc(76)] Could not bind socket to 127.0.0.1:6004
+[0303/104549:ERROR:node_debugger.cc(86)] Cannot start debugger server
