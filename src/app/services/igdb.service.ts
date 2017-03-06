@@ -35,10 +35,11 @@ getThemes = (tId) => {
 }
 
 getGenres = (gId) => {
-  this.url = `https://igdbcom-internet-game-database-v1.p.mashape.com/themes/${gId}?fields=name`;
+  this.url = `https://igdbcom-internet-game-database-v1.p.mashape.com/genres/${gId}?fields=name`;
   const headers = new Headers({ 'X-Mashape-Key': this.xKey });
   const options = new RequestOptions({headers: headers});
   return this.http.get(this.url, options)
   .map(resp => resp.json());
+}
 }
 

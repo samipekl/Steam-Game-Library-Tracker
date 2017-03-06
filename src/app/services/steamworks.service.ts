@@ -13,6 +13,7 @@ private done: any = false;
   constructor(private http: Http) { }
 setUser = (ID: string) => {
    this.userId = ID;
+    localStorage.setItem('steamUser', JSON.stringify(ID));
 }
 
 userCheck = (checker) => {
