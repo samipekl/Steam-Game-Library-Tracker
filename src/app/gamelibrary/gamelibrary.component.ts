@@ -33,9 +33,7 @@ export class GamelibraryComponent implements OnInit {
             this.games = res.response.games;
             // localStorage.setItem('userGames', JSON.stringify(this.games));
             console.log(this.games);
-            console.log('Checkpoint 1');
             for (let game of this.games) {
-              console.log('Checkpoint 2');
               game.tags = [];
               // this.set = [0, 0, 0, 0, 0, 0];
               // console.log(game.name);
@@ -47,6 +45,7 @@ export class GamelibraryComponent implements OnInit {
                     game.genreIds = res[0].genres;
                     game.themeIds = res[0].themes;
                     game.GDname = res[0].name;
+                    game.launchUrl = `steam://run/${game.appid}`
                     // this.set[0] = 1;
                     if (game.keywordIds !== "undefined") {
                       // console.log(game.keywordIds);

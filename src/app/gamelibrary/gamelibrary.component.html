@@ -21,6 +21,6 @@
     <p id="timePlayed"> Played: {{ game.playtime_forever }} minutes</p>
     <p id="tagList"> Tags: {{ game.tags }}</p>
     <p> IGDB name: {{ game.GDname }} </p>
-    <a href="steam://run/{{ game.appid }}">PLAY NOW</a>
+    <a href="{{ game.launchUrl | safe }}">PLAY NOW</a>
   </div>
 </div>
