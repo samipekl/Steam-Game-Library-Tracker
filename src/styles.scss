@@ -14,3 +14,28 @@ input {
   align-items: center;
   justify-content: center;
 }
+
+.gameBox {
+  text-align: center;
+  border-style: dashed;
+  border-color: black;
+  border-width: 5xp;
+  background-color: gray;
+  width: 400px;
+  margin: 10px;
+}
+
+.gameList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#tagBar {
+  height: 100px;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+#tagBox {
+  flex-grow: 1;
+}

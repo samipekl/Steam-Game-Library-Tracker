@@ -12,6 +12,7 @@ import { PSearchComponent } from './psearch/psearch.component';
 import { GSearchComponent } from './gsearch/gsearch.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { SafePipe } from './pipes/safe.pipe';
+import { TagbarComponent } from './tagbar/tagbar.component';
 
 const routeConfig = [
   {
@@ -40,7 +41,8 @@ const routeConfig = [
     PSearchComponent,
     GSearchComponent,
     TopBarComponent,
-    SafePipe
+    SafePipe,
+    TagbarComponent
   ],
   imports: [
     BrowserModule,

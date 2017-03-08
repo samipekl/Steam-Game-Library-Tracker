@@ -1,11 +1,26 @@
+<div id="tagBar" class="btn-group" data-toggle="buttons">
+  <label class="btn btn-success" id="tagBox" *ngFor="let tag of tagLog">
+    <input id="{{ tag }}" type="checkbox" autocomplete="off">{{ tag }}
+    </label>
+</div>
 <h2>Games</h2>
-<ul>
+<!--<ul>
   <li *ngFor="let game of games">
     <p> AppID: {{ game.appid }}</p>
     <p> Name: {{ game.name }}</p>
     <p> Played: {{ game.playtime_forever }} minutes</p>
     <p> Tags: {{ game.tags }}</p>
     <p> IGDB name: {{ game.GDname }} </p>
-    <br>
   </li>
-</ul>
+</ul> -->
+<div class="gameList">
+  <div class="gameBox" *ngFor="let game of games">
+    <p id="appId"> AppID: {{ game.appid }}</p>
+    <img src="http://media.steampowered.com/steamcommunity/public/images/apps/{{ game.appid }}/{{ game.img_logo_url }}.jpg">
+    <p id="gameName"> Name: {{ game.name }}</p>
+    <p id="timePlayed"> Played: {{ game.playtime_forever }} minutes</p>
+    <p id="tagList"> Tags: {{ game.tags }}</p>
+    <p> IGDB name: {{ game.GDname }} </p>
+    <a href="steam://run/{{ game.appid }}">PLAY NOW</a>
+  </div>
+</div>
