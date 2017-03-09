@@ -1,7 +1,8 @@
-<div id="tagBar" class="btn-group" data-toggle="buttons">
-  <label class="btn btn-success" id="tagBox" *ngFor="let tag of tagLog">
-    <input id="{{ tag }}" type="checkbox" autocomplete="off">{{ tag }}
-    </label>
+<div id="base">
+<div id="tagBar" class="btn-group" >
+  <button class="btn btn-success" id="tagBox" *ngFor="let tag of tagLog" (click)="filtering(tag)">
+    {{ tag }}
+    </button>
 </div>
 <h2>Games</h2>
 <!--<ul>
@@ -15,12 +16,14 @@
 </ul> -->
 <div class="gameList">
   <div class="gameBox" *ngFor="let game of games">
-    <p id="appId"> AppID: {{ game.appid }}</p>
+    <p class="{{ game.appid }}"> AppID: {{ game.appid }}</p>
     <img src="http://media.steampowered.com/steamcommunity/public/images/apps/{{ game.appid }}/{{ game.img_logo_url }}.jpg">
     <p id="gameName"> Name: {{ game.name }}</p>
     <p id="timePlayed"> Played: {{ game.playtime_forever }} minutes</p>
     <p id="tagList"> Tags: {{ game.tags }}</p>
     <p> IGDB name: {{ game.GDname }} </p>
-    <a href="{{ game.launchUrl | safe }}">PLAY NOW</a>
+    <p><a [href]="trusted(game)"><button class="btn btn-info">PLAY NOW</button></a></p>
+    <!--<iframe srcdoc ="<a href='{{ game.launchUrl }}'>PLAY NOW</a>"></iframe>-->
   </div>
+</div>
 </div>

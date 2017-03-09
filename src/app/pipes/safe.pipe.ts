@@ -7,7 +7,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 export class SafePipe implements PipeTransform {
   constructor(private sanitizer: DomSanitizer){}
   transform(url) {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    return '<a [href]="' + this.sanitizer.bypassSecurityTrustUrl(url) + '">PLAY NOW</a>';
   }
 
 }
