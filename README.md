@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-# Project
-=======
-<<<<<<< HEAD
-# SteamGameLibraryTracker
-=======
 # SGLT
->>>>>>> SB1
->>>>>>> a680f7c6768d53d2ea99bf11d4f95cdb4216c101
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.25.5.
 

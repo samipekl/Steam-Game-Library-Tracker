@@ -1,28 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 import { IGDBService } from './services/igdb.service';
 import { SteamworksService } from './services/steamworks.service';
->>>>>>> SB1
->>>>>>> a680f7c6768d53d2ea99bf11d4f95cdb4216c101
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a680f7c6768d53d2ea99bf11d4f95cdb4216c101
-
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
-    AppComponent
-<<<<<<< HEAD
-=======
-=======
 import { RouterModule, Router, Routes} from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -62,28 +43,14 @@ const routeConfig = [
     TopBarComponent,
     SafePipe,
     TagbarComponent
->>>>>>> SB1
->>>>>>> a680f7c6768d53d2ea99bf11d4f95cdb4216c101
   ],
   imports: [
     BrowserModule,
     FormsModule,
-<<<<<<< HEAD
-    HttpModule
-  ],
-  providers: [],
-=======
-<<<<<<< HEAD
-    HttpModule
-  ],
-  providers: [],
-=======
     HttpModule,
     RouterModule.forRoot(routeConfig)
   ],
   providers: [SteamworksService, IGDBService],
->>>>>>> SB1
->>>>>>> a680f7c6768d53d2ea99bf11d4f95cdb4216c101
   bootstrap: [AppComponent]
 })
 export class AppModule { }

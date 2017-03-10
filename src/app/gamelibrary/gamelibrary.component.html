@@ -5,24 +5,17 @@
     </button>
 </div>
 <h2>Games</h2>
-<!--<ul>
-  <li *ngFor="let game of games">
-    <p> AppID: {{ game.appid }}</p>
-    <p> Name: {{ game.name }}</p>
-    <p> Played: {{ game.playtime_forever }} minutes</p>
-    <p> Tags: {{ game.tags }}</p>
-    <p> IGDB name: {{ game.GDname }} </p>
-  </li>
-</ul> -->
+
 <div class="gameList">
   <div class="gameBox" *ngFor="let game of games">
-    <p class="{{ game.appid }}"> AppID: {{ game.appid }}</p>
-    <img src="http://media.steampowered.com/steamcommunity/public/images/apps/{{ game.appid }}/{{ game.img_logo_url }}.jpg">
-    <p id="gameName"> Name: {{ game.name }}</p>
-    <p id="timePlayed"> Played: {{ game.playtime_forever }} minutes</p>
+    <!--<p class="{{ game.appid }}"> AppID: {{ game.appid }}</p>-->
+    <a href="http://store.steampowered.com/app/{{ game.appid }}"><img src="http://cdn.edgecast.steamstatic.com/steam/apps/{{ game.appid }}/header.jpg"> </a>
+    <a href="http://store.steampowered.com/app/{{ game.appid }}"><h3 id="gameName"> {{ game.name }}</h3> </a>
+    <br>
+    <p id="timePlayed"> Playtime: {{ game.playtime_forever }} minutes</p>
     <p id="tagList"> Tags: {{ game.tags }}</p>
-    <p> IGDB name: {{ game.GDname }} </p>
-    <p><a [href]="trusted(game)"><button class="btn btn-info">PLAY NOW</button></a></p>
+    <!--<p> IGDB name: {{ game.GDname }} </p>-->
+    <p><a [href]="trusted(game)"><button class="btn btn-info" id="playbtn">PLAY NOW</button></a></p>
     <!--<iframe srcdoc ="<a href='{{ game.launchUrl }}'>PLAY NOW</a>"></iframe>-->
   </div>
 </div>

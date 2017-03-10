@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 @import '../node_modules/bootstrap/scss/bootstrap';
-=======
-<<<<<<< HEAD
-/* You can add global styles to this file, and also import other style files */
-=======
-@import '../node_modules/bootstrap/scss/bootstrap';
+$input-color: #1E2D40;
 
 #submitButton {
   height : 90px;
@@ -16,34 +11,85 @@ input {
 }
 
 #mainInputPanel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: fixed;
+  left: 35%;
+  top: 25%;
+  #submitButton {
+    color: #1E2D40;
+    font-size: 400%;
+    position: relative;
+    top: 20px;
+  }
+  input {
+    background-color: #D3D8D0;
+    color: $input-color;
+
+  }
+}
+::-webkit-input-placeholder{
+  color:$input-color;
+}
+:-moz-placeholder{
+  color:$input-color;
+}
+
+::-moz-placeholder{
+  color:$input-color;
+}
+
+:-ms-input-placeholder {
+  color:$input-color;
 }
 
 .gameBox {
   text-align: center;
-  border-style: dashed;
+  border-style: solid;
   border-color: black;
   border-width: 5xp;
-  background-color: gray;
-  width: 400px;
+  color: #D3D8D0;
+  background-color: #366F95;
+  width: 500px;
   margin: 10px;
   order:1;
+  h3 {
+    text-decoration: underline;
+  }
+  button:hover {
+    background-color: #358FC2;
+    color: white;
+    border-color: white;
+  }
+  button {
+    background-color: #BCDFF4;
+    color: black;
+    border-color: black;
+    border-width: 2px;
+  }
 }
 
 .gameList {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 #tagBar {
   display:flex;
   flex-wrap: wrap;
   order:2;
-  button:focus {
-    background-color: darkred;
+  color: #D3D8D0;
+  button:hover {
+    background-color: #1E2D40;
   }
+  button:focus {
+    background-color: #1E2D40;
+  }
+  button {
+    background-color: #366F95;
+    color: #D3D8D0;
+    border-color: #366F95;
+  }
+
 }
 
 #tagBox {
@@ -53,8 +99,23 @@ input {
 
 
 a {
-  color: red;
+  color: #D3D8D0;
   font-size: 16px;
 }
->>>>>>> SB1
->>>>>>> a680f7c6768d53d2ea99bf11d4f95cdb4216c101
+
+a:hover {
+  color: #1E2D40;
+}
+
+a:visited {
+  color: #D3D8D0;
+}
+
+body {
+  background-color: #1E2D40;
+  font-family: Tahoma;
+}
+
+img {
+  width: 100%;
+}

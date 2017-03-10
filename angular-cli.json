@@ -1,15 +1,7 @@
 {
   "project": {
     "version": "1.0.0-beta.25.5",
-<<<<<<< HEAD
-    "name": "project"
-=======
-<<<<<<< HEAD
-    "name": "steam-game-library-tracker"
-=======
     "name": "sglt"
->>>>>>> SB1
->>>>>>> a680f7c6768d53d2ea99bf11d4f95cdb4216c101
   },
   "apps": [
     {
@@ -28,21 +20,11 @@
       "styles": [
         "styles.scss"
       ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      "scripts": [],
-=======
->>>>>>> a680f7c6768d53d2ea99bf11d4f95cdb4216c101
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
         "../node_modules/tether/dist/js/tether.js",
         "../node_modules/bootstrap/dist/js/bootstrap.js"
       ],
-<<<<<<< HEAD
-=======
->>>>>>> SB1
->>>>>>> a680f7c6768d53d2ea99bf11d4f95cdb4216c101
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
