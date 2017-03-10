@@ -1,5 +1,13 @@
 {
+<<<<<<< HEAD
   "name": "project",
+=======
+<<<<<<< HEAD
+  "name": "steam-game-library-tracker",
+=======
+  "name": "sglt",
+>>>>>>> SB1
+>>>>>>> a680f7c6768d53d2ea99bf11d4f95cdb4216c101
   "version": "0.0.0",
   "license": "MIT",
   "angular-cli": {},
