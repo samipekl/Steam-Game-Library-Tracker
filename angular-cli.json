@@ -1,7 +1,11 @@
 {
   "project": {
     "version": "1.0.0-beta.25.5",
+<<<<<<< HEAD
     "name": "steam-game-library-tracker"
+=======
+    "name": "sglt"
+>>>>>>> SB1
   },
   "apps": [
     {
@@ -20,7 +24,15 @@
       "styles": [
         "styles.scss"
       ],
+<<<<<<< HEAD
       "scripts": [],
+=======
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/tether/dist/js/tether.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.js"
+      ],
+>>>>>>> SB1
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

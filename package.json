@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "steam-game-library-tracker",
+=======
+  "name": "sglt",
+>>>>>>> SB1
   "version": "0.0.0",
   "license": "MIT",
   "angular-cli": {},

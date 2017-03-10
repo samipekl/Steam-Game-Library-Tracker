@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { SteamGameLibraryTrackerPage } from './app.po';
 
 describe('steam-game-library-tracker App', function() {
@@ -5,6 +6,15 @@ describe('steam-game-library-tracker App', function() {
 
   beforeEach(() => {
     page = new SteamGameLibraryTrackerPage();
+=======
+import { SGLTPage } from './app.po';
+
+describe('sglt App', function() {
+  let page: SGLTPage;
+
+  beforeEach(() => {
+    page = new SGLTPage();
+>>>>>>> SB1
   });
 
   it('should display message saying app works', () => {

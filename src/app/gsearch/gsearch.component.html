@@ -1,0 +1,8 @@
+<div id="mainInputPanel" class="container">
+  <form #prefForm="ngForm" (ngSubmit)="setSteamId(prefForm.value)">
+    <label> steamId
+      <input type="text" name="steamId" [(ngModel)]="user.steamId" placeholder="Give me your SteamID"/>
+    </label>
+    <input  id="submitButton" type="submit" value="&#936;"/>
+  </form>
+</div>
