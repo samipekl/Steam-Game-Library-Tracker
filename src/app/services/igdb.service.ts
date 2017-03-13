@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class IGDBService {
 private url: string = ``;
-private xKey: string= `Fng1rTAYUfmshdMDHKCNyFLoNbuAp1V9fTCjsnDk0Ua2El3FIJ`;
+private xKey: string= `38RcdzIK0zmshlymrWXuCBMp3GJXp16Wa0Njsnq2labY9sILFJ`;
 
 
   constructor(private http: Http) { }

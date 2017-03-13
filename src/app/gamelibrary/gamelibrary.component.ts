@@ -88,6 +88,7 @@ export class GamelibraryComponent implements OnInit {
                           localStorage.setItem('userGames', JSON.stringify(this.games));
                           this.tagLog = this.tagLog.sort();
                           localStorage.setItem('tagLog', JSON.stringify(this.tagLog));
+                          this.allgames = this.games;
                         }
                       );
                     }

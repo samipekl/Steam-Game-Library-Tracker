@@ -22,8 +22,7 @@ export class GSearchComponent implements OnInit {
   ngOnInit() {
 
     if (localStorage.getItem('id') !== null) {
-      this.user = JSON.parse(localStorage.getItem('user'));
-    console.log(localStorage.getItem('id'));
+      this.user = JSON.parse(localStorage.getItem('id'));
     this.router.navigate(['gamelibrary']);
     }
   }
